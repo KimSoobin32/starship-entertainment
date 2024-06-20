@@ -47,7 +47,7 @@ body {
 /* 헤더 */
 header {
   background: #fff;
-  background: #55f;
+  /* background: #55f; */
   /* color: #fff; */
   /* position: fixed;
   top: 0;
@@ -155,7 +155,126 @@ header {
 
 /* 아티스트 */
 .artist {
-  background: #f55;
+  /* background: #f55; */
+  text-align: center;
+  overflow: hidden;
+}
+
+.artist-list {
+  border: 1px solid green;
+  /* background: #55f; */
+  width: 454px;
+  height: 100%;
+}
+.artist-list figure img {
+  border: 1px solid #5f5;
+  border-radius: 50%;
+}
+
+.artist {
+  position: relative;
+  /* margin-top: 28rem; */
+  padding: 9rem 0;
+}
+.artist-slider .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.artist-slider-wrap {
+  border: 1px solid #000;
+  /* overflow: hidden; */
+  height: 554px;
+
+  margin-top: 4rem;
+  /* background: #55f; */
+  /* !!! */
+  /* margin-left: -243px; */
+}
+.artist-slider {
+  border: 1px solid #f00;
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+}
+.artist-slider .swiper-slide {
+  flex: 0 0 auto;
+  filter: grayscale(1);
+  transform: scale(0.45);
+  transition: 0.4s;
+  height: 100%;
+
+  /* margin: 0 11px; */
+}
+.artist-slider .swiper-slide-active {
+  filter: grayscale(0);
+  transform: scale(1);
+  position: relative;
+  /* ddd */
+  /* width: 696px !important; */
+  width: 454px !important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  /* !!! */
+  margin-left: 80px;
+
+  /* margin: 0 12rem !important; */
+}
+.artist-slider .swiper-slide-active .artist-con {
+  display: block;
+}
+
+.artist-list figure {
+  width: 100%;
+}
+
+.artist-con {
+  /* padding: 6.9rem; */
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.artist-con h4 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin-top: 2rem;
+}
+.artist-con strong {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-top: 7px;
+}
+.artist-con p {
+  font-weight: 300;
+  font-size: 1.5rem;
+
+  margin-top: 2.5rem;
+}
+
+.artist-slider-wrap button {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  /* border: 1px solid #000; */
+  background: no-repeat 50% / contain;
+  z-index: 1;
+  top: 50%;
+  display: flex;
+  transition: 0.4s;
+}
+
+.artist-slider .btn-prev {
+  left: calc(50% - 454px); /* 중앙 슬라이드 왼쪽에 배치 */
+  /* left: 10%; */
+  background-image: url(../img/btn-prev.svg);
+}
+
+.artist-slider .btn-next {
+  right: calc(50% - 454px); /* 중앙 슬라이드 왼쪽에 배치 */
+  /* right: 10%; */
+  background-image: url(../img/btn-next.svg);
 }
 /*e 아티스트 */
 
