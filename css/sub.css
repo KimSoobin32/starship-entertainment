@@ -1,0 +1,90 @@
+@charset 'utf-8';
+.artist-page {
+  padding: 17.2rem 0;
+}
+
+.sec-title {
+  font-weight: 700;
+
+  text-align: center;
+  font-size: 4.5rem;
+}
+.artist-page-list {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 25px;
+}
+.artist-page-list li {
+  margin-top: 6rem;
+  width: calc(25% - 20px);
+  /* margin-right: 20px; */
+
+  margin-bottom: 50px;
+}
+.artist-page-list li figure figcaption {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+/* Breakpoints for different screen sizes */
+@media (max-width: 1598px) {
+  .inner {
+    width: 90.4rem;
+    width: 88.28125%;
+  }
+}
+@media (max-width: 1024px) {
+  .gnb {
+    display: none;
+  }
+  .artist-page-list li {
+    width: calc(33.3% - 20px);
+  }
+  .artist-page-list {
+    gap: 3rem;
+  }
+
+  /* 푸터 */
+  .foot-wrap {
+    flex-direction: column;
+  }
+
+  .foot-wrap ul {
+    margin-top: 9.6rem;
+  }
+  .text-wrap {
+    justify-content: space-between;
+  }
+  /*e 푸터 */
+}
+@media (max-width: 767px) {
+  .artist-page-list li {
+    width: calc(50% - 20px);
+    margin-bottom: 10px;
+  }
+  .artist-page-list {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .sec-title {
+    font-size: 3rem;
+  }
+  .artist-page-list li figure figcaption {
+    font-size: 1.6rem;
+  }
+  .text-wrap {
+    flex-direction: column;
+  }
+  .foot-wrap ul {
+    margin-top: 10rem;
+  }
+  .foot-wrap strong {
+    width: 16.2rem;
+    height: 5.8rem;
+  }
+}
