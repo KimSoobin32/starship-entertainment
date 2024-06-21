@@ -109,15 +109,15 @@ header {
 } */
 .btn-more {
   display: block;
-  width: 4rem;
+
+  width: 102px;
   height: 4rem;
-  /* background: url(../img/icon-plus2-white.svg) no-repeat 50% / contain; */
+
   margin-left: auto;
   margin-right: 7.8rem;
   margin-top: 1.8rem;
   /* display: flex; */
   display: flex;
-  width: 102px;
   justify-content: space-between;
   align-items: center;
   font-size: 2.5rem;
@@ -288,19 +288,31 @@ header {
 }
 .news-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   margin-top: 4rem;
+
+  flex-wrap: wrap;
 }
 .news-list li {
   border: 1px solid var(--bd);
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 78.5rem;
-  height: 41.4rem;
+  /* height: 41.4rem; */
+
+  /* flex: 0 1 49%; */
+  /* 785/1598*100 */
+  /* aspect-ratio: 1/0.5273885350318471; */
+
+  /* 414/785 */
+
   gap: 4.1rem;
   border-radius: 5px;
   padding: 4rem;
+  padding: 3rem 4rem 3rem 4rem;
 }
 .news-list li .con {
   width: 27.9rem;
@@ -325,7 +337,8 @@ header {
 .news-list li .con .con-bottom button {
   width: 5.2rem;
   height: 5.2rem;
-  background: url(../img/ion_rocket-sharp.svg) no-repeat;
+
+  background: url(../img/ion_rocket-sharp.svg) no-repeat 50% 50% / contain;
 }
 /*e 뉴스 */
 
@@ -336,7 +349,8 @@ header {
   text-align: center;
 }
 .video-wrap {
-  width: 1056px;
+  width: 100%;
+  max-width: 1056px;
   /* background: #55f; */
   aspect-ratio: 16/9;
   margin: 4rem auto 0 auto;
@@ -361,10 +375,10 @@ header {
 .album .inner {
   overflow: hidden;
 }
-.album-list {
-  /* border: 1px solid #55f; */
+/* .album-list {
+  border: 1px solid #55f;
   width: 514px;
-}
+} */
 
 .album {
   position: relative;
@@ -449,7 +463,9 @@ header {
 .product-list {
   margin-top: 6.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 .product-list li {
   /* border: 1px solid #000; */
@@ -530,3 +546,157 @@ header {
   margin-bottom: 5rem;
 }
 /*e 푸터 */
+
+/* .inner 크기에 맞는 분기점 추가 */
+@media (max-width: 1598px) {
+  .inner {
+    width: 90.4rem;
+    width: 88.28125%;
+    /* 904/1024*100 */
+    /* background: lightblue; */
+  }
+}
+
+@media (max-width: 1024px) {
+  .gnb {
+    display: none;
+  }
+  /* .album .inner {
+    width: 100%;
+  } */
+  .btn-more {
+    margin-right: 0;
+  }
+  .news-list li {
+    width: 100%;
+    padding: 3rem;
+  }
+
+  .news-list li .pic {
+    /* width: 15.4rem; */
+    width: 40%;
+  }
+  .news-list li .con {
+    width: 60%;
+  }
+
+  .foot-wrap {
+    flex-direction: column;
+  }
+
+  .foot-wrap ul {
+    margin-top: 9.6rem;
+  }
+  .text-wrap {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 800px) {
+  .news-list li .pic {
+    width: 50%;
+  }
+  .news-list li .con {
+    width: 14.3rem;
+    width: 50%;
+  }
+  .news-list li .con dl dd {
+    height: 8rem;
+    overflow: hidden;
+    margin-top: 1.6rem;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* 표시할 줄 수 */
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+  .news-list li .con .con-bottom {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .sec-title {
+    font-size: 3rem;
+  }
+  .btn-more {
+    font-size: 1.7rem;
+    width: 7rem;
+    gap: 7px;
+  }
+  .light {
+    width: 16px;
+    height: 16px;
+  }
+  .light::after {
+    width: 8px;
+    height: 8px;
+  }
+  .artist-con h4 {
+    font-size: 2rem;
+  }
+  .artist-con strong {
+    font-size: 1.5rem;
+  }
+  .news-list li {
+    padding: 2rem;
+    /* width: 36rem; */
+    height: 19.6rem;
+    gap: 2rem;
+  }
+  /* .news-list li .pic {
+
+    width: 50%;
+  }
+  .news-list li .con {
+    width: 14.3rem;
+    width: 50%;
+  } */
+  .news-list li .con dl dt {
+    font-size: 1.8rem;
+  }
+  .news-list li .con dl dd {
+    font-size: 1.5rem;
+
+    height: 7rem;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  .news-list li .con .con-bottom {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .news-list li .con .con-bottom button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .video-wrap .caption {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .album-slider-wrap {
+    margin-top: 5.3rem;
+  }
+  /* .foot-wrap {
+    flex-direction: column;
+  } */
+  .text-wrap {
+    flex-direction: column;
+  }
+  .foot-wrap ul {
+    margin-top: 10rem;
+  }
+  .foot-wrap strong {
+    width: 16.2rem;
+    height: 5.8rem;
+  }
+
+  .album-list figure {
+    width: 100%;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
