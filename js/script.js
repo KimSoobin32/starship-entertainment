@@ -12,7 +12,7 @@ $(function () {
   });
 
   const artistSlider = new Swiper('.artist-slider', {
-    // autoplay: { delay: 5000 },
+    autoplay: { delay: 3000 },
     loop: true,
     centeredSlides: true,
     slidesPerView: '5',
