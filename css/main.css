@@ -155,7 +155,7 @@ header {
 
 /* 아티스트 */
 .artist {
-  /* background: #f55; */
+  background: #f55;
   text-align: center;
   overflow: hidden;
 }
@@ -163,7 +163,7 @@ header {
 .artist-list {
   border: 1px solid green;
   /* background: #55f; */
-  width: 454px;
+
   height: 100%;
 }
 .artist-list figure img {
@@ -199,7 +199,7 @@ header {
 }
 .artist-slider .swiper-slide {
   flex: 0 0 auto;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
   transform: scale(0.45);
   transition: 0.4s;
   height: 100%;
@@ -207,17 +207,17 @@ header {
   /* margin: 0 11px; */
 }
 .artist-slider .swiper-slide-active {
-  filter: grayscale(0);
+  /* filter: grayscale(0); */
   transform: scale(1);
   position: relative;
   /* ddd */
   /* width: 696px !important; */
-  width: 454px !important;
+  /* width: 454px !important; */
   text-align: center;
   display: flex;
   justify-content: center;
   /* !!! */
-  margin-left: 80px;
+  /* margin-left: 80px; */
 
   /* margin: 0 12rem !important; */
 }
