@@ -7,28 +7,141 @@
 .sec-title {
   font-weight: 700;
 
-  text-align: left;
+  text-align: center;
   font-size: 4.5rem;
 }
+.member .sec-title {
+  text-align-last: left;
+}
+
 .artist-page-list {
   margin-top: 3.2rem;
   display: flex;
   flex-wrap: wrap;
-
   gap: 25px;
 }
+
 .artist-page-list li {
   margin-top: 6rem;
   width: calc(25% - 20px);
-  /* margin-right: 20px; */
-
   margin-bottom: 50px;
 }
-.artist-page-list li figure figcaption {
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* overflow 속성을 추가하여 자식 요소의 내용이 img-container를 벗어나지 않도록 설정 */
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.img-container figcaption {
   font-weight: 700;
   font-size: 2rem;
   margin-top: 1rem;
+  text-align: left;
 }
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(255, 162, 0.5); */
+  background: var(--main-color-orange);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+/* .view-text {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  display: none;
+} */
+
+/* .artist-page-list li:hover .overlay {
+  width: 200%;
+  height: 200%;
+  opacity: 1;
+  opacity: 0.8;
+} */
+
+/* .artist-page-list li:hover .view-text {
+  display: block;
+  opacity: 1;
+} */
+
+.artist-page-list li {
+  position: relative; /* li 요소를 relative로 설정하여 하위 요소들의 절대 위치를 상대적으로 설정할 수 있게 함 */
+}
+
+.view-text {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: bold;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: wobble-hor-bottom 1s 0.8s both infinite;
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1); /* transform의 scale 속성을 추가하여 크기 변화가 없도록 함 */
+  }
+  15% {
+    transform: translate(-50%, -50%) scale(1) rotate(-6deg); /* rotate 속성은 유지되도록 설정 */
+  }
+  30% {
+    transform: translate(-50%, -50%) scale(1) rotate(6deg); /* rotate 속성은 유지되도록 설정 */
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(1) rotate(-3.6deg); /* rotate 속성은 유지되도록 설정 */
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1) rotate(2.4deg); /* rotate 속성은 유지되도록 설정 */
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(1) rotate(-1.2deg); /* rotate 속성은 유지되도록 설정 */
+  }
+}
+
+.artist-page-list li:hover .overlay {
+  width: 200%;
+  height: 200%;
+  opacity: 0.8;
+}
+
+.artist-page-list li:hover .view-text {
+  opacity: 1;
+}
+
+.artist-page-list li:hover .overlay {
+  width: 200%;
+  height: 200%;
+  opacity: 0.8;
+}
+
+.artist-page-list li:hover .view-text {
+  opacity: 1;
+}
+
 /* e 아티스트 페이지 */
 
 /* s 아티스트 상세 페이지 */
@@ -279,6 +392,9 @@
     width: 170px;
     width: 20%;
   } */
+  .view-text {
+    font-size: 3rem;
+  }
   .member-list {
     gap: 8.5rem;
   }
@@ -291,6 +407,10 @@
   }
   .artist-name.black {
     bottom: -85px;
+  }
+
+  .year ul {
+    margin-top: 3rem;
   }
 }
 @media (max-width: 1010px) {
@@ -308,6 +428,7 @@
   .gnb {
     display: none;
   }
+
   .artist-page-list li {
     width: calc(33.3% - 20px);
   }
@@ -398,7 +519,9 @@
   .artist-page-list li figure figcaption {
     font-size: 1.6rem;
   }
-
+  .member {
+    margin-top: 50px;
+  }
   .member-list .mem-info h4 {
     font-size: 1.8rem;
   }
