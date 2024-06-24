@@ -7,7 +7,7 @@
 .sec-title {
   font-weight: 700;
 
-  text-align: center;
+  text-align: left;
   font-size: 4.5rem;
 }
 .artist-page-list {
@@ -106,17 +106,19 @@
 .member-wrap {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .member-list {
   /* background: #55f; */
   width: 65%;
   width: 986px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 13rem;
-  row-gap: 3.3rem;
+  row-gap: 5.3rem;
   text-align: center;
+  /* margin-left: 20rem; */
 }
 .member-list .mem-info {
   margin-top: 1.7rem;
@@ -134,7 +136,8 @@
 .member-list .mem-info p {
   font-size: 1.5rem;
   color: var(--text-color);
-  margin-top: 1.5rem;
+  /* margin-top: 1rem; */
+  font-weight: 300;
 }
 /* e 멤버 영역 */
 
@@ -146,28 +149,31 @@
 .awards-wrap {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .awards-wrap .sec-title {
   text-align: left;
 }
+
 .year-wrap {
   display: flex;
-  /* display: block; */
   flex-direction: column;
   gap: 5rem;
-}
-.year {
-  /* background: skyblue; */
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  gap: 4rem;
   width: 986px;
+}
+
+.year {
+  display: flex;
+  flex-wrap: wrap; /* 요소가 공간을 넘어가면 줄바꿈되게 함 */
+  /* gap: 4rem; */
+  width: 100%; /* 부모 요소의 전체 너비를 차지하게 함 */
+  align-items: center;
+  justify-content: space-between;
 }
 
 .donut {
   position: relative;
-  width: 216px; /* 도넛의 크기 */
+  width: 216px;
   height: 216px;
   border-radius: 50%;
   background: var(--main-color);
@@ -179,7 +185,7 @@
 .donut::before {
   content: '';
   position: absolute;
-  width: 80px; /* 도넛의 중앙 구멍 크기 */
+  width: 80px;
   height: 80px;
   border-radius: 50%;
   background-color: #fff;
@@ -193,33 +199,111 @@
   font-weight: 700;
   color: #333;
 }
+
+.year ul {
+  display: block;
+  /* donut의 너비와 gap을 제외한 나머지 공간 차지 */
+  /* width: calc(100% - 216px - 4rem); */
+  width: 676px;
+  /* background: skyblue; */
+}
+
 .year ul li {
   margin-bottom: 15px;
 }
+
 .year ul li dl {
   display: flex;
   gap: 18px;
+  flex-wrap: wrap;
 }
+
 .year ul li dl dt {
   font-size: 2rem;
   font-weight: 500;
 }
+
 .year ul li dl dd {
   font-size: 1.8rem;
   color: #5a5959;
 }
 
 /* e 어워드 영역 */
-
+.album .sec-title {
+  text-align: center;
+}
 /* e 아티스트 상세 페이지 */
 
 /* Breakpoints for different screen sizes */
+
 @media (max-width: 1598px) {
   .inner {
     width: 90.4rem;
     width: 88.28125%;
   }
+
+  /* .sec-title {
+    margin: 0 auto;
+  } */
+  /* .member-wrap {
+    justify-content: center;
+  } */
 }
+@media (max-width: 1565px) {
+  .awards-wrap .sec-title {
+    width: 100%;
+  }
+  .year {
+    margin-top: 9rem;
+  }
+}
+@media (max-width: 1444px) {
+  .sec-title {
+    width: 100%;
+  }
+  .member-wrap {
+    justify-content: center;
+  }
+  .member-list {
+    margin-top: 8rem;
+    width: 100%;
+    justify-content: space-between;
+    /* gap: 9rem; */
+  }
+  .member-list li {
+    margin-bottom: 5rem;
+  }
+}
+@media (max-width: 1116px) {
+  /* .member-list li {
+    width: 170px;
+    width: 20%;
+  } */
+  .member-list {
+    gap: 8.5rem;
+  }
+
+  .artist-name {
+    font-size: 10rem;
+  }
+  .artist-name.white {
+    bottom: -15px;
+  }
+  .artist-name.black {
+    bottom: -85px;
+  }
+}
+@media (max-width: 1010px) {
+  .year {
+    flex-direction: column;
+  }
+
+  .year ul {
+    width: 100%; /* 작은 화면에서는 전체 너비를 차지하게 함 */
+    margin-top: 2.8rem;
+  }
+}
+
 @media (max-width: 1024px) {
   .gnb {
     display: none;
@@ -244,6 +328,15 @@
   }
   /*e 푸터 */
 }
+@media (max-width: 1014px) {
+  .member-list {
+    gap: 5%;
+  }
+  .member-list li {
+    width: 28%;
+  }
+}
+
 @media (max-width: 767px) {
   .artist-page-list li {
     width: calc(50% - 20px);
@@ -251,6 +344,50 @@
   }
   .artist-page-list {
     gap: 4rem;
+  }
+  .member-list {
+    gap: 3%;
+  }
+  .member-list li {
+    width: 38%;
+    /* width: 170px; */
+  }
+
+  .artist-name {
+    font-size: 6rem;
+  }
+  .artist-name.white {
+    bottom: -9px;
+  }
+  .artist-name.black {
+    bottom: -51px;
+  }
+  .debut-info {
+    flex-direction: column;
+    gap: 0;
+  }
+  .debut-info dt,
+  .debut-info dd {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 650px) {
+  .year ul li {
+    margin-bottom: 3rem;
+  }
+  .year ul li dl {
+    line-height: 1;
+    gap: 0;
+  }
+  .year ul li dl dt {
+    width: 100%;
+  }
+  .year ul li dl dd {
+    margin-top: 1.3rem;
+  }
+  .year ul li dl dd b {
+    display: block;
+    margin-top: 7px;
   }
 }
 
@@ -261,6 +398,17 @@
   .artist-page-list li figure figcaption {
     font-size: 1.6rem;
   }
+
+  .member-list .mem-info h4 {
+    font-size: 1.8rem;
+  }
+  .member-list .mem-info strong {
+    font-size: 1.4rem;
+  }
+  .member-list .mem-info p {
+    font-size: 1.3rem;
+  }
+
   .text-wrap {
     flex-direction: column;
   }
@@ -270,5 +418,11 @@
   .foot-wrap strong {
     width: 16.2rem;
     height: 5.8rem;
+  }
+}
+
+@media (max-width: 397px) {
+  .member-list li {
+    width: 150px;
   }
 }
