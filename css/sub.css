@@ -1,4 +1,5 @@
 @charset 'utf-8';
+/* s 아티스트 페이지 */
 .artist-page {
   padding: 17.2rem 0;
 }
@@ -28,6 +29,189 @@
   font-size: 2rem;
   margin-top: 1rem;
 }
+/* e 아티스트 페이지 */
+
+/* s 아티스트 상세 페이지 */
+
+.inner {
+  position: relative;
+  /* text-align: center; */
+}
+/* s 아티스트 비주얼 영역 */
+.visual-pic {
+  position: relative;
+}
+
+.visual-pic img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.artist-visual figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.artist-name {
+  font-size: 145px;
+  font-weight: bold;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.artist-name.white {
+  color: white;
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.artist-name.black {
+  color: black;
+  position: absolute;
+  bottom: -123px; /* adjust based on the height of the text */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.debut-info {
+  margin-top: 20px;
+  display: flex;
+  gap: 4rem;
+}
+
+.debut-info dt,
+.debut-info dd {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.debut-info dd {
+  font-weight: 500;
+  color: var(--text-color);
+}
+/* e 아티스트 비주얼 영역 */
+
+/* s 멤버 영역 */
+.member {
+  margin-top: 10rem;
+  padding: 9rem 0;
+  /* background: skyblue; */
+}
+
+.member-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.member-list {
+  /* background: #55f; */
+  width: 65%;
+  width: 986px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 13rem;
+  row-gap: 3.3rem;
+  text-align: center;
+}
+.member-list .mem-info {
+  margin-top: 1.7rem;
+  font-weight: 600;
+}
+.member-list .mem-info h4 {
+  font-size: 2.5rem;
+}
+.member-list .mem-info strong {
+  font-size: 1.7rem;
+  line-height: 1;
+  font-weight: 500;
+  color: var(--main-color);
+}
+.member-list .mem-info p {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-top: 1.5rem;
+}
+/* e 멤버 영역 */
+
+/* s 어워드 영역 */
+.awards {
+  padding: 9rem 0;
+}
+
+.awards-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.awards-wrap .sec-title {
+  text-align: left;
+}
+.year-wrap {
+  display: flex;
+  /* display: block; */
+  flex-direction: column;
+  gap: 5rem;
+}
+.year {
+  /* background: skyblue; */
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 4rem;
+  width: 986px;
+}
+
+.donut {
+  position: relative;
+  width: 216px; /* 도넛의 크기 */
+  height: 216px;
+  border-radius: 50%;
+  background: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donut::before {
+  content: '';
+  position: absolute;
+  width: 80px; /* 도넛의 중앙 구멍 크기 */
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.center-text {
+  position: absolute;
+  z-index: 2;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.year ul li {
+  margin-bottom: 15px;
+}
+.year ul li dl {
+  display: flex;
+  gap: 18px;
+}
+.year ul li dl dt {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.year ul li dl dd {
+  font-size: 1.8rem;
+  color: #5a5959;
+}
+
+/* e 어워드 영역 */
+
+/* e 아티스트 상세 페이지 */
 
 /* Breakpoints for different screen sizes */
 @media (max-width: 1598px) {

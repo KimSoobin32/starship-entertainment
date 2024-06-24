@@ -430,6 +430,7 @@ header {
   font-size: 1.5rem;
 
   margin-top: 2.5rem;
+  color: #b8b8b8;
 }
 
 .album-slider-wrap button {
@@ -680,6 +681,21 @@ header {
   .album-slider-wrap {
     margin-top: 5.3rem;
   }
+  .album-list figure {
+    width: 100%;
+    width: 260px;
+    margin: 0 auto;
+  }
+  .album-con h4 {
+    font-size: 1.6rem;
+  }
+  .album-con strong {
+    font-size: 1.8rem;
+  }
+  .album-con p {
+    font-size: 1.3rem;
+  }
+
   /* .foot-wrap {
     flex-direction: column;
   } */
@@ -692,11 +708,5 @@ header {
   .foot-wrap strong {
     width: 16.2rem;
     height: 5.8rem;
-  }
-
-  .album-list figure {
-    width: 100%;
-    width: 300px;
-    margin: 0 auto;
   }
 }
