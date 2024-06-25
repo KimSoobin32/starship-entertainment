@@ -8,7 +8,7 @@
   --title-color: #000;
   --text-color: #666;
   --white: #fff;
-  --bd: #888;
+  --bd: #cdcdcd;
 }
 
 img {
@@ -500,6 +500,7 @@ header {
   width: 37.7rem;
   padding: 0 38.5px 0 38.5px;
   position: relative;
+  margin-bottom: 5rem;
 }
 .product-list li .badge {
   position: absolute;
@@ -519,6 +520,10 @@ header {
   margin-top: 1.7rem;
   font-size: 1.6rem;
   font-weight: 600;
+}
+.product-list li .info strong {
+  display: block;
+  height: 38px;
 }
 .product-list li .info span {
   display: block;
