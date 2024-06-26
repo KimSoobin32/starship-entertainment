@@ -20,7 +20,7 @@ $(function () {
       },
     },
   });
-
+  //슬라이드 크기 변할 땐 centeredSlides false
   const artistSlider = new Swiper('.artist-slider', {
     autoplay: { delay: 3000 },
     loop: true,

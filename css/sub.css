@@ -146,10 +146,6 @@
 
 /* s 아티스트 상세 페이지 */
 
-.inner {
-  position: relative;
-  /* text-align: center; */
-}
 /* s 아티스트 비주얼 영역 */
 .visual-pic {
   position: relative;
@@ -256,7 +252,7 @@
 
 /* s 어워드 영역 */
 .awards {
-  padding: 9rem 0;
+  padding: 9rem 0 15rem 0;
 }
 
 .awards-wrap {
