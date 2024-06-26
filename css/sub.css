@@ -149,6 +149,7 @@
 /* s 아티스트 비주얼 영역 */
 .visual-pic {
   position: relative;
+  margin-top: 7rem;
 }
 
 .visual-pic img {
