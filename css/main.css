@@ -178,7 +178,7 @@ header {
   /* background-color: #ff5; */
 
   position: relative;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 .visual .video {
   width: 100%;
@@ -318,6 +318,19 @@ header {
 
   flex-wrap: wrap;
 }
+.news-list li .pic figure {
+  /* width: 383px; */
+  /* height: 332px; */
+  width: 100%;
+  height: 100%;
+}
+.news-list li .pic figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
 .news-list li {
   border: 1px solid var(--bd);
   display: flex;
@@ -337,19 +350,37 @@ header {
   border-radius: 5px;
   padding: 4rem;
   padding: 3rem 4rem 3rem 4rem;
+  transition: 0.4s;
 }
+.news-list li:hover {
+  border-color: var(--main-color-orange);
+  box-shadow: 0 0 0 1px var(--main-color-orange);
+}
+
+.news-list li:hover .con .con-bottom button {
+  background-image: url(../img/ion_rocket-sharp-orange.svg);
+}
+
+/* .news-list li .pic figure {
+  overflow: hidden;
+} */
+/* .news-list li:hover .pic figure img {
+  transform: scale(1.1);
+} */
+
 .news-list li .con {
   width: 27.9rem;
 }
 .news-list li .con dl dt {
   font-size: 2.8rem;
   font-weight: 600;
+  height: 8.4rem;
 }
 .news-list li .con dl dd {
   font-size: 1.8rem;
   line-height: 160%;
   color: #494949;
-  margin-top: 3.6rem;
+  margin-top: 1.6rem;
   /* color: var(--text-color); */
 }
 .news-list li .con .con-bottom {
@@ -361,7 +392,7 @@ header {
 .news-list li .con .con-bottom button {
   width: 5.2rem;
   height: 5.2rem;
-
+  transition: 0.4s;
   background: url(../img/ion_rocket-sharp.svg) no-repeat 50% 50% / contain;
 }
 /*e 뉴스 */
@@ -510,6 +541,9 @@ header {
   padding: 0 38.5px 0 38.5px;
   position: relative;
   margin-bottom: 5rem;
+}
+.product-list li figure {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .product-list li .badge {
   position: absolute;
@@ -764,7 +798,7 @@ header {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 970px) {
   .menu-wrap {
     width: 70%;
   }
@@ -792,6 +826,42 @@ header {
   }
 }
 
+@media (max-width: 570px) {
+  .news-list li {
+    padding: 2rem;
+    /* width: 36rem; */
+    height: 19.6rem;
+    gap: 2rem;
+  }
+  /* .news-list li .pic {
+
+    width: 50%;
+  }
+  .news-list li .con {
+    width: 14.3rem;
+    width: 50%;
+  } */
+  .news-list li .con dl dt {
+    font-size: 1.8rem;
+    height: 6rem;
+  }
+  .news-list li .con dl dd {
+    font-size: 1.5rem;
+
+    height: 7rem;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  .news-list li .con .con-bottom {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .news-list li .con .con-bottom button {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
 @media (max-width: 500px) {
   .sec-title {
     font-size: 3rem;
@@ -816,38 +886,6 @@ header {
   .artist-con strong {
     font-size: 1.5rem;
   }
-  .news-list li {
-    padding: 2rem;
-    /* width: 36rem; */
-    height: 19.6rem;
-    gap: 2rem;
-  }
-  /* .news-list li .pic {
-
-    width: 50%;
-  }
-  .news-list li .con {
-    width: 14.3rem;
-    width: 50%;
-  } */
-  .news-list li .con dl dt {
-    font-size: 1.8rem;
-  }
-  .news-list li .con dl dd {
-    font-size: 1.5rem;
-
-    height: 7rem;
-    overflow: hidden;
-    margin-top: 1rem;
-  }
-  .news-list li .con .con-bottom {
-    margin-top: 5px;
-    font-size: 13px;
-  }
-  .news-list li .con .con-bottom button {
-    width: 2.5rem;
-    height: 2.5rem;
-  }
 
   .video-wrap .caption {
     margin-top: 2rem;
@@ -857,6 +895,15 @@ header {
   .album-slider-wrap {
     margin-top: 5.3rem;
   }
+  .album-slider .btn-prev {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .album-slider .btn-next {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .album-list figure {
     width: 100%;
     width: 260px;
