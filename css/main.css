@@ -745,6 +745,25 @@ header {
 }
 /* e 햄버거 */
 
+/* 탑버튼 */
+.top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--main-color-orange);
+  width: 90px;
+  height: 90px;
+
+  border-radius: 50%;
+  z-index: 9;
+}
+.top-btn i {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #fff;
+}
+/* e 탑버튼 */
+
 /* .inner 크기에 맞는 분기점 추가 */
 @media (max-width: 1598px) {
   .inner {
@@ -824,6 +843,15 @@ header {
   .news-list li .con .con-bottom {
     margin-top: 2.5rem;
   }
+  /* 탑버튼 */
+  .top-btn {
+    width: 75px;
+    height: 75px;
+  }
+  .top-btn i {
+    font-size: 2rem;
+  }
+  /* e 탑버튼 */
 }
 
 @media (max-width: 570px) {

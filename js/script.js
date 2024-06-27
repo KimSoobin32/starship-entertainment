@@ -41,6 +41,7 @@ $(function () {
       //   slidesPerView: 2,
       // },
       //브라우저 창 크기가 1200px 이상일 때
+      // slidesPerView 소수점으로 줄 수 있음! 6.5 -> 잘리게
       900: {
         slidesPerView: 5,
       },
@@ -57,5 +58,22 @@ $(function () {
     $dim.fadeToggle();
     // 햄버거 버튼에 on클래스 토글
     $btnMenu.toggleClass('on');
+  });
+
+  const topBtn = $('.top-btn');
+
+  // 스크롤 이벤트 리스너
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop() > 200) {
+      topBtn.addClass('show');
+    } else {
+      topBtn.removeClass('show');
+    }
+  });
+
+  // 버튼 클릭 이벤트 리스너
+  topBtn.on('click', function () {
+    console.log('ddd');
+    $('html, body').animate({ scrollTop: 0 }, 'smooth');
   });
 });
