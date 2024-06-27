@@ -73,7 +73,6 @@ $(function () {
 
   // 버튼 클릭 이벤트 리스너
   topBtn.on('click', function () {
-    console.log('ddd');
     $('html, body').animate({ scrollTop: 0 }, 'smooth');
   });
 });
